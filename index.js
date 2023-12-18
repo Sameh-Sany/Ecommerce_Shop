@@ -15,8 +15,10 @@ require("dotenv").config();
 const BaseError = require("./src/helpers/errors/BaseError");
 const RouteNotFoundError = require("./src/helpers/errors/RouteNotFoundError");
 
+// import routes
 const authRoutes = require("./src/routes/auth.js");
 const googleAuthRoutes = require("./src/routes/google-auth.js");
+const categoriesRoutes = require("./src/routes/categories.js");
 
 // Middleware
 app.use(express.json());
@@ -37,6 +39,7 @@ app.use(passport.session());
 //Routes
 app.use("/auth", googleAuthRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/categories", categoriesRoutes);
 
 // Error handling
 app.use("*", (req, res, next) => {
