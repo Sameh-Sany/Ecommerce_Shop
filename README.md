@@ -33,16 +33,10 @@ This is an ecommerce shop built with Node.js , Express.Js and Mongodb. It allows
    npm install
    ```
 
-3. Set up the database:
+3. Configure environment variables:
 
    ```bash
-   # Instructions for setting up the database (if applicable)
-   ```
-
-4. Configure environment variables:
-
-   ```bash
-   # Instructions for configuring environment variables (if applicable)
+   # add .env file like .env.example before running application
    ```
 
 ## Usage
