@@ -24,7 +24,7 @@ This is an ecommerce shop built with Node.js , Express.Js and Mongodb. It allows
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/ecommerce-shop.git
+   git clone https://github.com/Sameh-Sany/Ecommerce_Shop.git
    ```
 
 2. Install dependencies:
