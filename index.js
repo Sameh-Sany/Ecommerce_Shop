@@ -19,6 +19,8 @@ const RouteNotFoundError = require("./src/helpers/errors/RouteNotFoundError");
 const authRoutes = require("./src/routes/auth.js");
 const googleAuthRoutes = require("./src/routes/google-auth.js");
 const categoriesRoutes = require("./src/routes/categories.js");
+const brandsRoutes = require("./src/routes/brands.js");
+const productsRoutes = require("./src/routes/products.js");
 
 // Middleware
 app.use(express.json());
@@ -40,6 +42,8 @@ app.use(passport.session());
 app.use("/auth", googleAuthRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/categories", categoriesRoutes);
+app.use("/api/brands", brandsRoutes);
+app.use("/api/products", productsRoutes);
 
 // Error handling
 app.use("*", (req, res, next) => {
