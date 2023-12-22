@@ -1,8 +1,8 @@
-const Category = require("../models/category");
+const Category = require("../models/category.js");
 const { validationResult } = require("express-validator");
 const slugify = require("slugify");
-const ValidationError = require("../helpers/errors/ValidationError");
-const InternalError = require("../helpers/errors/InternalError");
+const ValidationError = require("../helpers/errors/ValidationError.js");
+const InternalError = require("../helpers/errors/InternalError.js");
 const success = require("../helpers/success.js");
 const ResourceAlreadyExistError = require("../helpers/errors/ResourceAlreadyExistError.js");
 const ResourceNotFoundError = require("../helpers/errors/ResourceNotFoundError.js");
@@ -45,10 +45,13 @@ exports.getCategories = async (req, res) => {
   }
 };
 
-exports.getCategory = async (req, res) => {
+exports.getCategory = async (req, res, next) => {
   try {
     const { id } = req.params;
     const category = await Category.findOne({ _id: id });
+
+    if (!category) return next(new ResourceNotFoundError("Category", id));
+
     return res.json(success(category));
   } catch (err) {
     console.log(err);

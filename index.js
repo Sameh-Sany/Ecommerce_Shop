@@ -21,6 +21,7 @@ const googleAuthRoutes = require("./src/routes/google-auth.js");
 const categoriesRoutes = require("./src/routes/categories.js");
 const brandsRoutes = require("./src/routes/brands.js");
 const productsRoutes = require("./src/routes/products.js");
+const SubcategoriesRoutes = require("./src/routes/subCategories.js");
 
 // Middleware
 app.use(express.json());
@@ -44,7 +45,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/categories", categoriesRoutes);
 app.use("/api/brands", brandsRoutes);
 app.use("/api/products", productsRoutes);
-
+app.use("/api/subcategories", SubcategoriesRoutes);
 // Error handling
 app.use("*", (req, res, next) => {
   next(
