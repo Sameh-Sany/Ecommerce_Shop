@@ -8,7 +8,7 @@ const {
   createBrand,
   updateBrand,
   deleteBrand,
-} = require("../controllers/brands");
+} = require("../controllers/brandsController");
 
 router.get("/", getBrands);
 

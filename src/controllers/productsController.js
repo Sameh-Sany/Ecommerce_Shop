@@ -1,9 +1,9 @@
-const Product = require("../models/product");
-const Brand = require("../models/brand");
-const Category = require("../models/category");
+const Product = require("../models/product.js");
+const Brand = require("../models/brand.js");
+const Category = require("../models/category.js");
 const { validationResult } = require("express-validator");
-const ValidationError = require("../helpers/errors/ValidationError");
-const InternalError = require("../helpers/errors/InternalError");
+const ValidationError = require("../helpers/errors/ValidationError.js");
+const InternalError = require("../helpers/errors/InternalError.js");
 const success = require("../helpers/success.js");
 const ResourceAlreadyExistError = require("../helpers/errors/ResourceAlreadyExistError.js");
 const ResourceNotFoundError = require("../helpers/errors/ResourceNotFoundError.js");
