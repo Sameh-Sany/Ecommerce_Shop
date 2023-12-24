@@ -1,0 +1,695 @@
+{
+	"info": {
+		"_postman_id": "dfb5fca4-87da-4b50-b517-daa1e17c6e6f",
+		"name": "ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "get all products",
+					"id": "cb6b4c86-226b-45d6-b8ea-75890045140c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/products"
+					},
+					"response": []
+				},
+				{
+					"name": "get a products",
+					"id": "2c0b248a-1c95-450d-b29a-7143b120c6d8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/products/6429ef0196573daedc4aab75"
+					},
+					"response": []
+				},
+				{
+					"name": "add product",
+					"id": "1fdcb147-8eac-46e5-b1d3-e27e0b454954",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iphone 11\",\r\n    \"price\": 5000,\r\n    \"description\": \"mobile\",\r\n    \"image\": \"test\",\r\n    \"brand\": \"65844cd252f727ffa439355f\",\r\n    \"category\": \"6585378e3b1c9217daf372fd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/api/products"
+					},
+					"response": []
+				},
+				{
+					"name": "edit product",
+					"id": "385512f1-075d-44c8-8473-7ab3ab946a92",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iphone 11\",\r\n    \"price\": 5000,\r\n    \"description\": \"mobile\",\r\n    \"image\": \"test\",\r\n    \"brand\": \"65844cd252f727ffa439355f\",\r\n    \"category\": \"6585378e3b1c9217daf372fd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/products/6429ef0196573daedc4aab75"
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"id": "17165792-03ea-4e8a-bc4e-9b9d36340dcc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{domain}}/products/63b0160f374070363c774f0f"
+					},
+					"response": []
+				}
+			],
+			"id": "059629d3-b88d-44f7-b04b-3fad411e55c3"
+		},
+		{
+			"name": "brands",
+			"item": [
+				{
+					"name": "get all brands",
+					"id": "bd26983d-c7f5-4e0c-8719-338d390b5447",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/brands"
+					},
+					"response": []
+				},
+				{
+					"name": "get a brand",
+					"id": "9370c546-e279-4ca7-b726-7982f85172b5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/brands/6583e6da5221ed4e1044f88d"
+					},
+					"response": []
+				},
+				{
+					"name": "add brand",
+					"id": "995c4f05-44ae-45ff-acff-5ec1825fe622",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iphone\",\r\n    \"image\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/brands"
+					},
+					"response": []
+				},
+				{
+					"name": "edit brand",
+					"id": "3071ff61-8958-4045-a50e-3703d21a2f36",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tet\",\r\n    \"image\": \"private\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/brands/6583e6da5221ed4e1044f88d"
+					},
+					"response": []
+				},
+				{
+					"name": "delete brand",
+					"id": "f400f796-fefa-433f-9b6d-411ea214104d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{domain}}/brands/6583e6da5221ed4e1044f88d"
+					},
+					"response": []
+				}
+			],
+			"id": "eac57e18-9750-45e1-9b6e-0d8ec532114d"
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "get all categories",
+					"id": "61e57af5-94f9-494a-9f4f-8114ad88a495",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "get a category",
+					"id": "37abf6e7-b148-4f44-8eb1-864204257b6c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/categories/65800c318f0a37293f857742"
+					},
+					"response": []
+				},
+				{
+					"name": "add category",
+					"id": "d3d0d821-58f5-4e64-8925-3049578d1bcd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Electronics\",\r\n    \"description\": \"this is description for Electronics devices\",\r\n    \"image\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "edit category",
+					"id": "e2a09908-ec09-4333-9bc6-ab5151ecf801",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test 2\",\r\n    \"description\": \"test\",\r\n    \"image\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/categories/65800c7a33ce936c56187dac"
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"id": "9e0a553d-fe13-4db6-9b76-3b1caca1a385",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{domain}}/categories/65800e6fc6b097f5d69f448e"
+					},
+					"response": []
+				}
+			],
+			"id": "9e8d2966-0780-4dcf-a4e7-b47b17b99965"
+		},
+		{
+			"name": "subCategories",
+			"item": [
+				{
+					"name": "get all subcategories",
+					"id": "ad312336-dd8e-44ac-bc2b-e6417dc3d7d3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/subcategories"
+					},
+					"response": []
+				},
+				{
+					"name": "get a subcategory",
+					"id": "56466514-d385-4ec3-95ae-9103b91eb8f1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/subcategories/658538628b8ccba6f255e3cd"
+					},
+					"response": []
+				},
+				{
+					"name": "add subcategory",
+					"id": "7f2e4710-4ad7-41fb-979f-d057f6749b5e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobiles\",\r\n    \"description\": \"this is Mobiles section inside Electronics category\",\r\n    \"image\": \"test\",\r\n    \"category\": \"6585378e3b1c9217daf372fd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/subcategories"
+					},
+					"response": []
+				},
+				{
+					"name": "edit subcategory",
+					"id": "eb587963-b198-4f28-8b98-7b5040ee07f1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mobile\",\r\n    \"description\": \"test\",\r\n    \"image\": \"test\",\r\n    \"category\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/subcategories/65800c7a33ce936c56187dac"
+					},
+					"response": []
+				},
+				{
+					"name": "delete subcategory",
+					"id": "f816c45b-5e07-42a8-b0a1-4e76b1d1a82d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{domain}}/subcategories/65800e6fc6b097f5d69f448e"
+					},
+					"response": []
+				}
+			],
+			"id": "b29afa97-5162-49de-8f75-08e4837999ac"
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "get all products",
+					"id": "f6265ce1-86b8-4265-ac7f-bac3bc41bd34",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/products"
+					},
+					"response": []
+				},
+				{
+					"name": "get a product",
+					"id": "ae2a8774-079a-4eec-a40f-ac440c9c7e3f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/products/65844dc220a5308beff88ea3"
+					},
+					"response": []
+				},
+				{
+					"name": "add product",
+					"id": "7ab121e9-4655-4d97-86e1-4f04450d94fa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iphone 13\",\r\n    \"description\": \"apple smart phone\",\r\n    \"price\": \"1000\",\r\n    \"category\": \"65844cc152f727ffa439355c\",\r\n    \"brand\": \"65844cd252f727ffa439355f\",\r\n    \"image\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/products"
+					},
+					"response": []
+				},
+				{
+					"name": "edit product",
+					"id": "d2cfeff7-daa6-44c6-9ec6-bc6e4c2b30b4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iphone 14\",\r\n    \"description\": \"apple smart phone\",\r\n    \"price\": \"1000\",\r\n    \"category\": \"65844cc152f727ffa439355c\",\r\n    \"brand\": \"65844cd252f727ffa439355f\",\r\n    \"image\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/products/65844dc220a5308beff88ea3"
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"id": "bad47a10-c53b-48dd-a901-9d4b91716534",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{domain}}/products/65844dc220a5308beff88ea3"
+					},
+					"response": []
+				}
+			],
+			"id": "3e9f0ed8-4218-4131-8c4e-9a5a616c494e"
+		},
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "register",
+					"id": "39fec279-bc26-4040-a3bc-7ca7e132c4ca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"sameh\",\r\n    \"lastName\": \"sany\",\r\n    \"email\": \"samehsany@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"id": "a2889df3-3989-4cd3-b941-23c1fbfc1028",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"samehsany@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "google login",
+					"id": "14e028eb-0969-4e81-b43a-e74e1ec263b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/auth/google"
+					},
+					"response": []
+				}
+			],
+			"id": "0333c797-4460-4fee-9094-b169cfd3288a"
+		},
+		{
+			"name": "elasticSerach",
+			"item": [
+				{
+					"name": "ingest data",
+					"id": "9ee679f0-30be-4b85-9145-b0c3be62c6c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/ingest_data/products"
+					},
+					"response": []
+				},
+				{
+					"name": "search results",
+					"id": "790ffdef-6ac3-4bcb-9bfb-487ee61012bc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/results?productName=i&productDescription=apple",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"results"
+							],
+							"query": [
+								{
+									"key": "productName",
+									"value": "i"
+								},
+								{
+									"key": "productDescription",
+									"value": "apple"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "8a5cdde6-a738-4ce6-96a7-1f0a7274f84d"
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "getCartByUserId",
+					"id": "31db6c27-6ac4-493f-916d-426ab2abe56e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/carts"
+					},
+					"response": []
+				},
+				{
+					"name": "addProductToCart",
+					"id": "0f3eebb1-d7d5-46ce-9b5c-3310c5e9b14b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"65880138ca8e7f3cc75f456b\",\r\n    \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/carts"
+					},
+					"response": []
+				},
+				{
+					"name": "updateProductQuantity",
+					"id": "b3c162ab-3e7d-4a74-85a9-8e028102186c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/carts/productId/65880138ca8e7f3cc75f456b"
+					},
+					"response": []
+				},
+				{
+					"name": "removeProductFromCart",
+					"id": "2636aa0f-a665-4a47-bdda-962fc7736687",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{domain}}/carts/productId/65880138ca8e7f3cc75f456b"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllCartProducts",
+					"id": "7e6c70a6-9d01-48de-ada9-0e00f10bab8e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{domain}}/carts/deleteAllCartProducts"
+					},
+					"response": []
+				}
+			],
+			"id": "7ba6f3d2-aaf5-4565-b5d2-56dd2c5d2519"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODdmZmM3ZGY3N2FiNzY4MjgyZGVlZiIsImlhdCI6MTcwMzQxMTY1NSwiZXhwIjoxNzAzNDk4MDU1fQ.2exdpovc_8KwpCm917YAvojzwdK8kXr8r85EZ3-erxU"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "9286ed7a-a04a-4e45-989b-d64525f8c56f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "eb47d25a-e4ae-47a1-b998-fcece1905581",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		},
+		{
+			"key": "domain",
+			"value": "http://13.37.105.40:3000/api"
+		}
+	]
+}
