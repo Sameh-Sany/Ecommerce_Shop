@@ -1,10 +1,11 @@
 # Ecommerce Shop
 
-This is an ecommerce shop built with Node.js , Express.Js and Mongodb. It allows users to browse and purchase products online.
+This is an ecommerce shop built with Node.js. It allows users to browse and purchase products online.
 
 ## Table of Contents
 
 - [Features](#features)
+- [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -18,6 +19,15 @@ This is an ecommerce shop built with Node.js , Express.Js and Mongodb. It allows
 - Secure payment processing
 - Order tracking and history
 - Admin dashboard for managing products, orders, and users
+
+## Technologies
+
+- Node.js
+- Express.js
+- Mongodb
+- ElasticSearch
+- Winston
+- JWT
 
 ## Installation
 
