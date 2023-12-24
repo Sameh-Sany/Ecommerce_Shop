@@ -7,6 +7,7 @@ const InternalError = require("../helpers/errors/InternalError.js");
 const ValidationError = require("../helpers/errors/ValidationError.js");
 const ResourceAlreadyExistError = require("../helpers/errors/ResourceAlreadyExistError.js");
 const ResourceNotFoundError = require("../helpers/errors/ResourceNotFoundError.js");
+const cart = require("../models/cart.js");
 require("dotenv").config();
 // const { sendEmail } = require("../helpers/sendEmail.js");
 // const { OAuth2Client } = require("google-auth-library");
@@ -34,6 +35,9 @@ module.exports.register = async (req, res, next) => {
       password: hashedPassword,
       role,
     });
+
+    // create cart for user after register
+    await cart.create({ user: user._id });
 
     const token = `Bearer ${jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
