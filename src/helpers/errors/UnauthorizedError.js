@@ -3,7 +3,7 @@ const BaseError = require("./BaseError");
 class UnauthorizedError extends BaseError {
   constructor(error = "Unauthorized") {
     super(error);
-    this.statusCode = 403;
+    this.statusCode = 401;
     this.errors = [
       {
         msg: error,
