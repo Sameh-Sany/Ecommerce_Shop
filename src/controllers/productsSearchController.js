@@ -1,4 +1,4 @@
-const client = require("../config/elasticsearch/client");
+const client = require("../helpers/elasticsearch/client");
 
 exports.productsSearch = async (req, res) => {
   let productName = req.query?.productName;
