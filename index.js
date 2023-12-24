@@ -12,7 +12,7 @@ require("./src/config/passport");
 require("dotenv").config();
 
 // import elasticsearch data management routes
-const data = require("./src/config/elasticsearch/data_management/retrieve_and_ingest_data");
+const data = require("./src/helpers/elasticsearch/data_management/retrieve_and_ingest_data");
 const productsSearch = require("./src/routes/productsSearch");
 
 // import error handling
