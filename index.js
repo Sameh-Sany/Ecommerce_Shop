@@ -9,9 +9,13 @@ const morgan = require("morgan");
 const passport = require("passport");
 const session = require("express-session");
 require("./src/config/passport");
-
 require("dotenv").config();
 
+// import elasticsearch data management routes
+const data = require("./src/config/elasticsearch/data_management/retrieve_and_ingest_data");
+const productsSearch = require("./src/routes/productsSearch");
+
+// import error handling
 const BaseError = require("./src/helpers/errors/BaseError");
 const RouteNotFoundError = require("./src/helpers/errors/RouteNotFoundError");
 
@@ -46,6 +50,11 @@ app.use("/api/categories", categoriesRoutes);
 app.use("/api/brands", brandsRoutes);
 app.use("/api/products", productsRoutes);
 app.use("/api/subcategories", SubcategoriesRoutes);
+
+// elasticsearch data management routes
+app.use("/api/ingest_data", data);
+app.use("/api", productsSearch);
+
 // Error handling
 app.use("*", (req, res, next) => {
   next(
