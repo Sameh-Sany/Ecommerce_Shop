@@ -23,9 +23,8 @@ const userSchema = new Schema(
       required: true,
     },
     role: {
-      type: String,
-      enum: ["admin", "seller", "user"],
-      default: "user",
+      type: Schema.Types.ObjectId,
+      ref: "Role",
     },
     googleId: {
       type: String,
