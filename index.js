@@ -27,6 +27,7 @@ const brandsRoutes = require("./src/routes/brands.js");
 const productsRoutes = require("./src/routes/products.js");
 const subcategoriesRoutes = require("./src/routes/subCategories.js");
 const cartRoutes = require("./src/routes/carts.js");
+const permissionsRoutes = require("./src/routes/permissions.js");
 
 // Middleware
 app.use(express.json());
@@ -52,7 +53,7 @@ app.use("/api/brands", brandsRoutes);
 app.use("/api/products", productsRoutes);
 app.use("/api/subcategories", subcategoriesRoutes);
 app.use("/api/carts", cartRoutes);
-
+app.use("/api/permissions", permissionsRoutes);
 // elasticsearch data management routes
 app.use("/api/ingest_data", data);
 app.use("/api", productsSearch);
