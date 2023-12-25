@@ -273,6 +273,95 @@
 			"id": "9e8d2966-0780-4dcf-a4e7-b47b17b99965"
 		},
 		{
+			"name": "permissions",
+			"item": [
+				{
+					"name": "get all permissions",
+					"id": "e22e0e69-a1aa-4a49-aa47-4e5bf8f879f1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/permissions"
+					},
+					"response": []
+				},
+				{
+					"name": "get a permission",
+					"id": "0045e064-b643-4b29-857d-8ed83ae8c7b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/permissions/65800c318f0a37293f857742"
+					},
+					"response": []
+				},
+				{
+					"name": "add permission",
+					"id": "83eacd6e-806d-4117-8f22-04b48b939c5c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Electronics\",\r\n    \"description\": \"this is description for Electronics devices\",\r\n    \"image\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/permissions"
+					},
+					"response": []
+				},
+				{
+					"name": "edit permission",
+					"id": "7c0bc721-237c-4b9b-9684-ada150fb28e7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test 2\",\r\n    \"description\": \"test\",\r\n    \"image\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/permissions/65800c7a33ce936c56187dac"
+					},
+					"response": []
+				},
+				{
+					"name": "delete permission",
+					"id": "6fb1c032-5b66-49f3-8be7-6f81937d4ae3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{domain}}/permissions/65800e6fc6b097f5d69f448e"
+					},
+					"response": []
+				}
+			],
+			"id": "9bef328a-53f2-4359-b8fd-f7eee03fc8f8"
+		},
+		{
 			"name": "subCategories",
 			"item": [
 				{
