@@ -362,6 +362,95 @@
 			"id": "9bef328a-53f2-4359-b8fd-f7eee03fc8f8"
 		},
 		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "get all roles",
+					"id": "7e0f9246-ba14-4d34-a2b7-d5d25e29823c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/roles"
+					},
+					"response": []
+				},
+				{
+					"name": "get a role",
+					"id": "83b7ec59-79b3-4a6a-986c-40caba78dafa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local}}/roles/6589b8840d66e80a8102bf54"
+					},
+					"response": []
+				},
+				{
+					"name": "add role",
+					"id": "af34e634-0be7-4256-acc7-5393ff3cb09f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"permissions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local}}/roles"
+					},
+					"response": []
+				},
+				{
+					"name": "edit role",
+					"id": "9488af7d-376d-4370-964d-6122918b37c9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"permissions\": [\r\n        \"6589b8aa0d66e80a8102bf5a\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local}}/roles/6589b8840d66e80a8102bf54"
+					},
+					"response": []
+				},
+				{
+					"name": "delete role",
+					"id": "559367d0-1ba8-4c3f-a232-61db9b439406",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{domain}}/roles/6589803e43b72cebde9bd209"
+					},
+					"response": []
+				}
+			],
+			"id": "174cee22-9b0a-4a94-bc6e-14d279d62896"
+		},
+		{
 			"name": "subCategories",
 			"item": [
 				{
