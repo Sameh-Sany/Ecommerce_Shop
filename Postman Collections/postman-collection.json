@@ -386,7 +386,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{local}}/roles/6589b8840d66e80a8102bf54"
+						"url": "{{domain}}/roles/6589b8840d66e80a8102bf54"
 					},
 					"response": []
 				},
@@ -408,7 +408,7 @@
 								}
 							}
 						},
-						"url": "{{local}}/roles"
+						"url": "{{domain}}/roles"
 					},
 					"response": []
 				},
@@ -423,14 +423,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"permissions\": [\r\n        \"6589b8aa0d66e80a8102bf5a\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"permissions\": [\r\n        \"6589b8aa0d66e80a8102bf5a\",\r\n        \"6589b8aa0d66e80a8102bf5a\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{local}}/roles/6589b8840d66e80a8102bf54"
+						"url": "{{domain}}/roles/6589b8840d66e80a8102bf54"
 					},
 					"response": []
 				},
@@ -443,7 +443,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{domain}}/roles/6589803e43b72cebde9bd209"
+						"url": "{{domain}}/roles/6589b84364e8278e4a88df67"
 					},
 					"response": []
 				}
