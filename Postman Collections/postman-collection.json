@@ -498,6 +498,28 @@
 					"response": []
 				},
 				{
+					"name": "verifiy email",
+					"id": "99dc2147-e07f-4c82-9708-3ccaa3a5f401",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"samehsany@gmail.com\",\r\n    \"otp\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/auth/verify-email"
+					},
+					"response": []
+				},
+				{
 					"name": "google login",
 					"id": "14e028eb-0969-4e81-b43a-e74e1ec263b1",
 					"protocolProfileBehavior": {
