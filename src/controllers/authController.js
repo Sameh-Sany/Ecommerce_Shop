@@ -9,9 +9,7 @@ const ResourceAlreadyExistError = require("../helpers/errors/ResourceAlreadyExis
 const ResourceNotFoundError = require("../helpers/errors/ResourceNotFoundError.js");
 const cart = require("../models/cart.js");
 require("dotenv").config();
-// const { sendEmail } = require("../helpers/sendEmail.js");
-// const { OAuth2Client } = require("google-auth-library");
-// const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
+const sendVerificationEmail = require("../helpers/sendVerificationEmail.js");
 
 // Register
 module.exports.register = async (req, res, next) => {
@@ -36,13 +34,19 @@ module.exports.register = async (req, res, next) => {
       role,
     });
 
-    // create cart for user after register
-    await cart.create({ user: user._id });
-
     const token = `Bearer ${jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
     })}`;
 
+    // create cart for user after register
+    await cart.create({ user: user._id });
+
+    // send verification email with  verification code
+    const verificationCode = Math.floor(100000 + Math.random() * 900000);
+    user.verificationCode = verificationCode;
+    await user.save();
+
+    await sendVerificationEmail(email, verificationCode);
     return res.json(success({ user, token }));
   } catch (err) {
     console.log(err);
@@ -71,6 +75,36 @@ module.exports.login = async (req, res, next) => {
     })}`;
 
     return res.json(success({ user, token }));
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json(new InternalError(err));
+  }
+};
+
+// Verify Email
+
+module.exports.verifyEmail = async (req, res, next) => {
+  try {
+    // verify email with verificationCode  and update isVerified to true
+    const { email, verificationCode } = req.body;
+
+    if (!email || !verificationCode)
+      return next(new ValidationError("Invalid credentials"));
+
+    const user = await User.findOne({ email });
+
+    if (!user) return next(new ResourceNotFoundError("User", email));
+
+    if (user.isVerified)
+      return next(new ValidationError("Email already verified"));
+
+    if (user.verificationCode !== verificationCode)
+      return next(new ValidationError("Invalid credentials"));
+
+    user.isVerified = true;
+    await user.save();
+
+    return res.json(success({ user }));
   } catch (err) {
     console.log(err);
     return res.status(500).json(new InternalError(err));

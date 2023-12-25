@@ -24,7 +24,7 @@ const userSchema = new Schema(
     },
     role: {
       type: String,
-      enum: ["admin", "user"],
+      enum: ["admin", "seller", "user"],
       default: "user",
     },
     googleId: {
@@ -42,18 +42,18 @@ const userSchema = new Schema(
       default: "email",
     },
 
-    // status: {
-    //   type: String,
-    //   enum: ["active", "inactive"],
-    //   default: "active",
-    // },
-    // verificationToken: {
-    //   type: String,
-    // },
-    // verified: {
-    //   type: Boolean,
-    //   default: false,
-    // },
+    status: {
+      type: String,
+      enum: ["active", "inactive"],
+      default: "active",
+    },
+    verificationCode: {
+      type: String,
+    },
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
