@@ -312,7 +312,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Electronics\",\r\n    \"description\": \"this is description for Electronics devices\",\r\n    \"image\": \"test\"\r\n}",
+							"raw": "{\r\n    \"name\": \"add category\",\r\n    \"description\": \"this is permission allow user to create category\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -334,14 +334,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"test 2\",\r\n    \"description\": \"test\",\r\n    \"image\": \"test\"\r\n}",
+							"raw": "{\r\n    \"name\": \"add category\",\r\n    \"description\": \"this is permission allow user to create category\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{domain}}/permissions/65800c7a33ce936c56187dac"
+						"url": "{{domain}}/permissions/65897ff6ab675645ba663684"
 					},
 					"response": []
 				},
@@ -354,7 +354,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{domain}}/permissions/65800e6fc6b097f5d69f448e"
+						"url": "{{domain}}/permissions/6589803e43b72cebde9bd209"
 					},
 					"response": []
 				}
